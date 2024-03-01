@@ -1,2 +1,2 @@
-Aprendi que GIT é tipo um grupo de programação que podem enviar seus códigos para que seus colegas possa ver e modificar a qualquer momento sem pedir sua permissão.
+Aprendi que GIT é tipo um grupo de programadores que podem enviar seus códigos para que seus colegas possa ver e modificar a qualquer momento sem pedir sua permissão.
 Entendi que GITHUB é uma rede social de programadores.
