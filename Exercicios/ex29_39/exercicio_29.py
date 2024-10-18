@@ -1,5 +1,5 @@
 num1 = input("Digite o primeiro numero: ")
-num2 = input("Digite o segundo numero: ")
+num2 = input("Digite o segundo numero:  ")
 
 operacao = input("Digite qual operaação você deseja : + - * / ")
  
