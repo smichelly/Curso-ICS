@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>{{titulo}}</h1>
+    <p>{{descricao_exercicio}}</p>
+    
+    <form action="{% url 'ex15' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="frase">
+        <button type="submit">Enviar</button>
+    </form>
+    {% if frase1 %}
+        <h2>{{frase1}} </h2>
+    {% endif %}
+
+    <a href="{% url 'home' %}">Voltar para a home</a>
+
+</body>
+</html>

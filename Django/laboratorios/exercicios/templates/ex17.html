@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{titulo}}</h1>
+    <p>{{descricao_exercicio}}</p>
+
+    <form action="{% url 'ex17' %}" method="POST">
+        {% csrf_token %}
+        <h4>Cor</h4>
+        <input type="text" name="palavra2" required>
+        <h4>Objeto</h4>
+        <input type="text" name="palavra1" required>
+        <button type="submit">Enviar</button>
+
+        {% if frase %}
+        <h2>{{frase}}</h2>
+    {% endif %}
+
+    </form>
+
+    <a href="{% url 'home' %}">Voltar para a home</a>
+
+</body>
+</html>

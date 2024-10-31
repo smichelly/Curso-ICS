@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>{{titulo}}</h1>
+    <p>{{descricao_exercicio}}</p>
+
+
+    <form action="{% url 'ex13' %}" method="POST">
+        {% csrf_token %}
+        <input type="number" name="ano_de_nascimento">
+        <button type="submit">Enviar</button>
+    </form>
+    {% if data_de_nascimento %}
+        <h2>Você tem {{data_de_nascimento}} anos</h2>
+    {% endif %}
+
+    <a href="{% url 'home' %}">Voltar para a home</a>
+
+</body>
+</html>
