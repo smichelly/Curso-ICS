@@ -405,7 +405,7 @@ def ex29(request):
         divisao = int(num1) / int(num2)
         data['divisao'] = divisao
 
-    return render(request, 'ex29.html', data)
+    return render(request, 'ex29.html', data, operacao)
 
     #if operacao == '+':
     #soma = int(num1) + int(num2)
