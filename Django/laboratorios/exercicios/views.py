@@ -378,49 +378,4 @@ def ex28(request):
 
     return render(request, 'ex28.html', data)
 
-def ex29(request):
-    data = {
-        'titulo' : 'Exercicio 29. Calculadora Simples',
-        'descricao_exercicio' : 'Peça ao usuário que digite dois números e então pergunte qual operação ele deseja realizar (adição, subtração, multiplicação ou divisão). Realize a operação e mostre o resultado.'
-    }
-
-    if request.method == 'POST':
-        num1 = request.POST.get('num1') 
-        num2 = request.POST.get('num2')
-        operacao = input("Digite qual operaação você deseja : + - * / ")
-
-    elif operacao == '+':
-        soma = int(num1) + int(num2)
-        data['soma'] = soma
-
-    elif operacao == '-':
-        subtracao = int(num1) - int(num2)
-        data['subtracao'] = subtracao
-
-    elif operacao == '*':
-        multiplicacao = int(num1) * int(num2)
-        data['multiplicacao'] = multiplicacao
-
-    elif operacao == '/':
-        divisao = int(num1) / int(num2)
-        data['divisao'] = divisao
-
-    return render(request, 'ex29.html', data, operacao)
-
-    #if operacao == '+':
-    #soma = int(num1) + int(num2)
-    #print(soma)
-
-    #elif operacao == '-':
-    #subtracao = int(num1) - int(num2)
-    #print(subtracao)
-
-    #elif operacao == '*':
-    #multiplicacao = int(num1) * int(num2)
-    #print(multiplicacao)
-
-    #elif operacao == '/':
-    #divisao = int(num1) / int(num2)
-    #print(divisao)
-
 

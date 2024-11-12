@@ -31,12 +31,7 @@ urlpatterns = [
     path('ex26/', views.ex26, name='ex26'),
     path('ex27/', views.ex27, name='ex27'),
     path('ex28/', views.ex28, name='ex28'),
-    path('ex29/', views.ex29, name='ex29'),
     
-
-
-
-
 
 
 ]
