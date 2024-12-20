@@ -2,7 +2,7 @@
 
 import django.db.models.deletion
 from django.db import migrations, models
-
+from datetime import datetime
 
 class Migration(migrations.Migration):
 
@@ -41,19 +41,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='aluguelcarros',
             name='cpf',
-            field=models.CharField(default='a definir', max_length=11),
+            field=models.CharField(default='00000', max_length=11),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='aluguelcarros',
             name='fim_reserva',
-            field=models.DateField(auto_now_add=True, default='a definir'),
+            field=models.DateField(auto_now_add=True, default=datetime.now()),
             preserve_default=False,
         ),
         migrations.AddField(
             model_name='aluguelcarros',
             name='inicio_reserva',
-            field=models.DateField(auto_now_add=True, default='a definir'),
+            field=models.DateField(auto_now_add=True, default=datetime.now()),
             preserve_default=False,
         ),
         migrations.AddField(
