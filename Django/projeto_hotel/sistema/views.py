@@ -3,9 +3,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 
-def hospedagem(request):
-    return render(request, 'hospedagem.html')
-
 def aluguelcarro(request):
     return render(request, 'aluguelcarro.html')
 

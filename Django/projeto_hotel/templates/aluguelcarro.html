@@ -4,70 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    </head>
-    <body class="container">
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/home"><b>Hotel Estrela Mar</b></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Início</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/aluguelcarro">Aluguel de Carro</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/feedback">Contato e Feedbacks</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="procurar">
-                  <input class="form-control me-2" type="procurar" placeholder="Procurar" aria-label="Procurar">
-                  <button class="btn btn-outline-success" type="submit">Procurar</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          
+    <style>
+      .car-container {
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          width: 300px;
+          text-align: center;
+          margin: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          box-sizing: border-box;
+          display: inline-block;
+      
+      }
+      .car-image {
+          width: 100%;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+      }
+      .car-price {
+          font-size: 24px;
+          color: #28a745;
+          margin: 10px 0;
+      }
+
+      img {
+            max-width: 100%; /* Ajusta a imagem para não ultrapassar a div */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+      
+  </style>
+
+</head>
+
+<body>
+    
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home"><b>Hotel Estrela do Mar</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aluguelcarro">Aluguel de Carro</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/feedback">Tem alguma dúvida? Fale conosco!</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
+          </li>
+        
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+                
           <h1>Aluguel de Carros</h1>
 
-          <p> Oferecemos 3 variedade de veículos para atender às suas necessidades do hóspede hospedado em nosso hotel, seja para viagens de negócios ou lazer</p>
+          <p> Oferecemos 3 variedade de veículos para atender às suas necessidades do hóspede hospedado em nosso hotel, seja para viagens de negócios ou lazer!</p>
+
           <form>
-            <label for="modelo">Tipo de Carro</label>
+            <label for="modelo">Opções de Carro:</label>
             <select id="modelo" name="modelo">
-              <option value="hat">Hat</option>
-              <option value="sedan">Sedan</option>
-              <option value="pickup">Pickup</option>
+              <option value="logan">Renault Logan</option>
+              <option value="nivus">Volkswagen Nivus</option>
+              <option value="duster">Renault Duster</option>
+              <option value="kwid">Renault Kwid</option>
             </select>
 
             <label for="modelo">Forma de Pagamento:</label>
@@ -83,14 +103,46 @@
             <label for="dataFim">Data de Fim:</label>
             <input type="date" id="dataFim" name="dataFim">
           
-            <input type="submit" value="Reservar">
+            <label for="dataFim">Deseja incluir motorista?</label>
+            <label for="yes-option">Sim</label>
+            <input id="yes-option" type="radio" name="hotel-stay" />
+            <label for="no-option">Não</label>
+            <input id="yes-option" type="radio" name="hotel-stay" />
 
-          </form>
+            
+            
           
+          
+            <input type="submit" value="Reservar">
+          </form>
+
+
+          <div class="car-container">
+            <img src="https://s1.cdn.autoevolution.com/images/gallery/RENAULT-Logan-5253_33.jpg" alt="Carro" class="car-image">
+             <h2>Renault Logan</h2>
+             <p class="car-price">R$ 259,99</p>
+         </div>
+          
+          <div class="car-container">
+            <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2020/07/Volkswagen-Nivus-Highline-compara-735-1.jpg?quality=70&strip=info" alt="Carro" class="car-image">
+            <h2>Volkswagen Nivus</h2>
+            <p class="car-price">R$ 320,00</p>
+            
+          </div>
+          
+          <div class="car-container">
+            <img src="https://carroecarros.com.br/wp-content/uploads/2016/08/Nova-Duster-Dynamique-2017-4.jpeg" alt="Carro" class="car-image">
+            <h2>Renault Duster</h2>
+            <p class="car-price">R$ 375,00</p>
+          </div>
+
+          <div class="car-container">
+            <img src="https://www.automaistv.com.br/wp-content/uploads/2022/03/IMG-6094_edited-1200x720.jpg" alt="Carro" class="car-image">
+            <h2>Renault Kwid</h2>
+            <p class="car-price">R$ 530,00</p>
+          </div>
         
-    
-    
-    
+
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
