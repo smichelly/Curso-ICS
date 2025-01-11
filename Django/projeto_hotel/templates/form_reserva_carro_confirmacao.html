@@ -77,59 +77,15 @@
     </div>
   </nav>
                 
-          <h1>Aluguel de Carros</h1>
+          <h1>Confirmacao de reserva</h1>
+          <h2>Carro selecionado: </h2>
 
-          <p> Oferecemos 3 variedade de veículos para atender às suas necessidades do hóspede hospedado em nosso hotel, seja para viagens de negócios ou lazer!</p>
-
-          <form>
-            <label for="modelo">Opções de Carro:</label>
-            <select id="modelo" name="modelo">
-              <option value="logan">Renault Logan</option>
-              <option value="nivus">Volkswagen Nivus</option>
-              <option value="duster">Renault Duster</option>
-              <option value="kwid">Renault Kwid</option>
-            </select>
-
-            <label for="modelo">Forma de Pagamento:</label>
-            <select id="modelo" name="modelo">
-              <option value="cartao">Cartão</option>
-              <option value="dinheiro">Dinheiro</option>
-              <option value="pix">Pix</option>
-            </select>
-
-            <label for="dataInicio">Data de Início:</label>
-            <input type="date" id="dataInicio" name="dataInicio">
-          
-            <label for="dataFim">Data de Fim:</label>
-            <input type="date" id="dataFim" name="dataFim">
-          
-            <label for="dataFim">Deseja incluir motorista?</label>
-            <label for="yes-option">Sim</label>
-            <input id="yes-option" type="radio" name="hotel-stay" />
-            <label for="no-option">Não</label>
-            <input id="yes-option" type="radio" name="hotel-stay" />
-
-            
-            
-          
-          
-            <input type="submit" value="Reservar">
-          </form>
-
-
-          {% for carro in carros %}
-          
           <div class="car-container">
             <img src="{{ carro.foto }}" alt="Carro" class="car-image">
              <h2>{{ carro.nome }}</h2>
              <p class="car-price">R$ {{ carro.valor }}</p>
-
-             <a href="{% url 'reservar' carro.id %}">Reservar</a>
          </div>
-          
 
-          {% endfor %}
-    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
     </html>
