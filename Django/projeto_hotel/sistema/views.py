@@ -22,6 +22,8 @@ def fazer_reserva(request, carro_id):
         reserva.save()
         return render(request, 'form_reserva_carro_confirmacao.html', {'carro': carro})
     return render(request, 'form_reserva_carro.html', {'carro': carro})
+# Criar uma view para o 
+
 
 def lazerbemestar(request):
     return render(request, 'lazerbemestar.html')
