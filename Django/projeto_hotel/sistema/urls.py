@@ -28,7 +28,7 @@ urlpatterns = [
     # url que chama uma view para o cadastro
     path('lazerbemestar/', lazerbemestar),
     path('cadastro/', cadastro),
-    path('cadastro/' fazer_cadastro, name='fazer_cadastro'),
+    path('cadastro/', fazer_cadastro, name='fazer_cadastro'),
     path('feedback/', feedback),
 
 ]

@@ -8,6 +8,40 @@
 </head>
 
 <style>
+.container {
+  max-width: 1300px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;  
+  }
+
+
+
+p{
+font-size: 23px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding-bottom: 10px;
+padding-left: 70px;
+padding-right: 300px;
+color: rgb(106, 16, 16);
+        
+}
+
+h1 {
+font-size: 46px;
+color: rgb(200, 19, 19);
+padding-bottom: 20px;
+padding-left: 11px;
+text-shadow: 0px -1px 1px black;
+}
+
+a{
+  color: rgb(106, 16, 16);
+
+}
+
+
 
 
 
@@ -44,28 +78,25 @@
 
   <div class="container">
 
+    <h1>Deixe seu Feedback!</h1>
+
+    <form action="contato" method="post">
+
+<div class="form-floating mb-3">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
+  <label for="floatingTextarea2Disabled">Comments</label>
+</div> 
+      <button type="submit">Enviar</button>
+
+    </form>
+
     <h1>Entre em Contato Conosco!</h1>
 
     
       <p>Nome: Hotel Estrela do Mar</p>
       <p>E-mail: <a href="email">hotelestreladomar@gmail.com</a></p>
       <p>Telefone:(11)3768-9764</p>
-      <p>Endereço:Avenida da Praia,789</p>
-      <p>Bairro Indústrial</p>
-      <p>&#128205;Ilhabela-SP </p>
-
-  
-    <h1>Deixe seu Feedback!</h1>
-
-    <form action="contato" method="post">
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="10" style="width: 350px;"></textarea> 
-      <button type="submit">Enviar</button>
-
-    </form>
-
-    
+      <p>Endereço:Avenida da Praia,789, Bairro Indústrial, &#128205;Ilhabela-SP </p>
   
   </div>
 
