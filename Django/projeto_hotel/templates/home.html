@@ -5,7 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+      .container {
+        max-width: 1300px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 5px;   
+         }
+
+      h3 {
+        font-size: 35px;
+        color: rgb(200, 19, 19);
+        padding-bottom: 20px;
+        padding-left: 11px;
+        padding-top: 7px;
+        text-shadow: 0px -1px 1px black;
+      }
+
+      p{
+        font-size: 23px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 10px;
+        padding-left: 70px;
+        padding-right: 300px;
+        color: rgb(106, 16, 16);
+        
+
+      }
+
+      a{
+        color: rgb(106, 16, 16);
+
+      }
+
+      #a2{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 510px;
+        padding-right: 550px;
+        padding-bottom: 10px;
+      }
+
+      #a2:hover{
+        box-shadow: 0px 10px 10px rgb(162, 14, 14);
+
+      }
+
+      #a3{
+        font-size: 17px;
+      }
+
+      img{
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgb(106, 16, 16);
+
+        
+    
+      }
+
+      img:hover{
+        box-shadow: 0px 5px 10px rgb(162, 14, 14);
+
+      }
+
+
+    </style>
+
+
+
+
 </head>
+
+
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -16,49 +91,103 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
+              <li id="li2" class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/home">Início</a>
               </li>
-              <li class="nav-item">
+              <li id="li2" class="nav-item">
                 <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>
               </li>
-              <li class="nav-item">
+              <li id="li2" class="nav-item">
                 <a class="nav-link" href="/aluguelcarro">Aluguel de Carro</a>
               </li>
-              <li class="nav-item dropdown">
+              <li id="li2" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/feedback">Tem alguma dúvida? Fale conosco!</a></li>
+                  <li id="li2" ><a class="dropdown-item" href="/feedback">Tem alguma dúvida? Fale conosco!</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
+                <a id="a3" class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
               </li>
-              <a href="/cadastro" class="btn btn-outline-primary">Faça sua Reserva!</a>
+              <a href="/cadastro" class="btn btn-outline-danger">Faça sua Reserva!</a>
             </ul>
             
           </div>
         </div>
       </nav>
 
-    <main>
+    <div class="container">
 
-      <h3>Conheça Hotel Estrela do Mar</h3>
+      <div class="clearfix">
+        <img src="https://th.bing.com/th/id/R.98796dec8446fdfd4f4dc3538a734989?rik=DWcPcl90oPepTg&riu=http%3a%2f%2fbestlocationhotels.com%2fwp-content%2fuploads%2f2020%2f04%2fPalace-Praia-Hotel.jpg&ehk=TWmY48ZNeFUr9tsWpnO2Mr0g%2bm952g%2b72FuLeREl3GM%3d&risl=&pid=ImgRaw&r=0" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+      
+        <h3><b>Conheça Hotel Estrela do Mar</b></h3>
 
-      <p>O <b>Hotel Estrela do Mar</b> é um estabelecimento de hospitalidade moderno e acolhedor, localizado em uma região privilegiada da cidade de <a href="https://www.ilhabela.sp.gov.br/" target="_blank"><b>Ilhabela - SP</b></a>. Projetado com atenção aos detalhes, o hotel oferece acomodações espaçosas e bem equipadas, além de uma ampla infraestrutura de serviços e facilidades, como restaurante, academia, piscina e spa. Essa combinação de conforto e comodidades visa proporcionar aos hóspedes uma experiência única e memorável durante sua estadia. </p>
+        <p>O <b>Hotel Estrela do Mar</b> é um estabelecimento de hospitalidade moderno e acolhedor, localizado em uma região privilegiada da cidade de <a href="https://www.ilhabela.sp.gov.br/" target="_blank"><b>Ilhabela - SP</b></a>. Projetado com atenção aos detalhes, o hotel oferece acomodações espaçosas e bem equipadas, além de uma ampla infraestrutura de serviços e facilidades, como restaurante, academia, piscina e spa. Essa combinação de conforto e comodidades visa proporcionar aos hóspedes uma experiência única e memorável durante sua estadia. </p>
+      
+        <p>A equipe altamente treinada do Hotel Estrela do Mar está comprometida em atender aos hóspedes com excelência, desde o check-in até o check-out. Com uma política de atendimento personalizado e foco na satisfação dos clientes, o hotel se destaca como uma opção confiável e acolhedora para viajantes a lazer e a negócios que buscam uma estadia excepcional.
+        </p>
+      
+        
+      </div>
 
-      <p>A equipe altamente treinada do Hotel Estrela do Mar está comprometida em atender aos hóspedes com excelência, desde o check-in até o check-out. Com uma política de atendimento personalizado e foco na satisfação dos clientes, o hotel se destaca como uma opção confiável e acolhedora para viajantes a lazer e a negócios que buscam uma estadia excepcional.
-      <a href="/cadastro"><b>Faça sua reserva!</b></a>
-      </p>
 
-      <img src="https://th.bing.com/th/id/R.98796dec8446fdfd4f4dc3538a734989?rik=DWcPcl90oPepTg&riu=http%3a%2f%2fbestlocationhotels.com%2fwp-content%2fuploads%2f2020%2f04%2fPalace-Praia-Hotel.jpg&ehk=TWmY48ZNeFUr9tsWpnO2Mr0g%2bm952g%2b72FuLeREl3GM%3d&risl=&pid=ImgRaw&r=0" alt="">
+      <h3><b>Nossos Quartos</b></h3>
 
-    </main>
-      <footer class="p-4 bg-dark text-light text-center">
-        <p>Copyright © 2024 Hotel Estrela do Mar . Todos os direitos reservados.</p>
-      </footer>
+      <p>Os quartos do nosso hotel são uma excelente escolha para famílias! Com um design acolhedor e espaçoso, cada membro da família encontrará seu conforto. As camas são amplas e confortáveis, garantindo noites tranquilas de descanso. </p>
+
+      <p>Nossos quartos são equipados com comodidades como frigobar e micro-ondas, permitindo que você prepare lanches para as crianças a qualquer momento. Além disso, oferecemos uma variedade de atividades para entreter os pequenos, tornando a estadia ainda mais divertida.</p>
+        
+      <p>A localização do hotel é ideal, próxima a várias atrações familiares, facilitando a exploração da área. Venha criar memórias inesquecíveis com sua família em um ambiente acolhedor e confortável!</p>
+
+
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+      <a id="a2" href="/cadastro" class="btn btn-outline-danger"><b>Faça sua Reserva!</b></a>
+
+    </div>
+     
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

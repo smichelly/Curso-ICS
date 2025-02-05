@@ -27,7 +27,7 @@
       }
       .car-price {
           font-size: 24px;
-          color: #28a745;
+          color: #8d1919;
           margin: 10px 0;
       }
 
@@ -35,6 +35,46 @@
             max-width: 100%; /* Ajusta a imagem para não ultrapassar a div */
             height: auto; /* Mantém a proporção da imagem */
         }
+
+      #divcarro{
+
+        text-align: center;
+        
+      }
+
+        .container {
+        max-width: 1300px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 5px;   
+         }
+
+      h1 {
+        font-size: 47px;
+        color: rgb(200, 19, 19);
+        text-align: center;
+        text-shadow: 1px -1px 1px black;
+      }
+
+      #h2 {
+        font-size: 35px;
+        color: rgb(216, 17, 17);
+        padding-top: 20px;
+        text-align: justify;
+        text-shadow: 0px -1px 1px black;
+      }
+
+      label{
+        font-size: 23px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 500px;
+        color: rgb(106, 16, 16);
+        
+
+      }
       
   </style>
 
@@ -77,35 +117,50 @@
     </div>
   </nav>
                 
-          <h1>Form de reserva de carro</h1>
-          <h2>Carro selecionado: </h2>
+      <div class="container">
+          <h1><b>Reservando Carro</b></h1>
+          <h2 id="h2"><b>Carro selecionado  &#8595;</b></h2>
 
           <div class="car-container">
-            <img src="{{ carro.foto }}" alt="Carro" class="car-image">
+            <img src="{{ carro.imagem.url }}" alt="Carro" class="car-image">
              <h2>{{ carro.nome }}</h2>
              <p class="car-price">R$ {{ carro.valor }}</p>
          </div>
 
          <form method="POST">
             {% csrf_token %}
-            <label for="Nome">Nome</label>
-            <input type="text" name="nome">
-            <br>
-            <label for="CPF">CPF</label>
-            <input type="text" name="cpf">
-            <br>
-            <label for="">Forma Pagamento</label>
-            <input type="text" name="forma_pagamento">
-            <br>
-            <label for="">Id do Carro</label>
-            <input type="text" name="carro_id" value="{{carro.id}}">
 
-            <button>Confirmar</button>
-         </form>
+            <form>
+
+            <label for="Nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="inputEmail4" name="nome">
+               
+            <br>
+
+            <label for="CPF" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="inputEmail4" name="cpf">
+        
+            <br>
+
+            <label for="" class="form-label">Forma de Pagamento</label>
+            <input type="text" class="form-control" id="inputEmail4" name="forma_pagamento">
+
+            <br>
+
+            <label for="" class="form-label">ID do Carro</label>
+            <input type="text" class="form-control" id="inputEmail4" name="carro_id" value="{{carro.id}}">
+
+            <br>
+            <br>
+
+            <a href="/aluguelcarro" class="btn btn-outline-danger">Voltar</a>
+            <button type="submit" class="btn btn-outline-success">Reservar</button>
+
+          </form>
+        </div>
 
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
-    </html>
+    
 </body>
 </html>

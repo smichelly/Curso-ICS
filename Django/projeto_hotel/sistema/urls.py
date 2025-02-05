@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from.views import home, aluguelcarro, lazerbemestar, cadastro, feedback, fazer_reserva
+from.views import home, aluguelcarro, lazerbemestar, cadastro, feedback, fazer_reserva, fazer_cadastro
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +28,9 @@ urlpatterns = [
     # url que chama uma view para o cadastro
     path('lazerbemestar/', lazerbemestar),
     path('cadastro/', cadastro),
+    path('cadastro/' fazer_cadastro, name='fazer_cadastro'),
     path('feedback/', feedback),
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
