@@ -77,12 +77,12 @@
   </nav>
 <div class="container">
 <h1>Cadastro</h1>
-<form action="/cadastro" method="post">
+<form action="{% url 'fazer_cadastro' %}" method="post">
   {% csrf_token %}
 
 
   <label for="nome">Nome Completo</label>
-  <input type="text" id="nome" name="nome" required>
+  <input type="text" id="nome" name="nome_completo" required>
 
   <label for="telefone">Telefone</label>
   <input type="tel" id="telefone" name="telefone" required>
@@ -98,7 +98,7 @@
 
 
   <label for="tipo">Tipo documento</label>
-  <select id="tipo" name="tipo" required>
+  <select id="tipo" name="tipo_documento" required>
     <option selected>Tipo documento</option>
     <option>CPF</option>
     <option>RG</option>

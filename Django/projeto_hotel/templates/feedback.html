@@ -89,13 +89,20 @@ text-shadow: 0px -1px 1px black;
 
     <h1>Deixe seu Feedback!</h1>
 
-    <form action="contato" method="post">
+    <form action="{% url 'coletar_feedback' %}" method="post">
 
-<div class="form-floating mb-3">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
-  <label for="floatingTextarea2Disabled">Comentários</label>
-</div> 
-      <button type="submit" class="btn btn-outline-danger">Enviar</button>
+    <div class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
+      <label for="floatingTextarea2Disabled">Comentários</label>
+    </div> 
+
+    <label for="avaliacao">Estralas</label>
+    <select name="avaliacao" id="">
+      <option value="1">1 ★</option>
+      <option value="2">2 ★</option>
+      <option value="3">3 ★</option>
+    </select>
+    <button type="submit" class="btn btn-outline-danger">Enviar</button>
 
     </form>
 

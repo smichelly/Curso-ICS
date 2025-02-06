@@ -16,20 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from.views import home, aluguelcarro, lazerbemestar, cadastro, feedback, fazer_reserva, fazer_cadastro
+from.views import home, aluguelcarro, lazerbemestar, cadastro, feedback, fazer_reserva, fazer_cadastro, coletar_feedback
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
+    path('', home),
     path('aluguelcarro/', aluguelcarro),
     path('aluguelcarro/reservar/<int:carro_id>', fazer_reserva, name='reservar'),
     # url que chama uma view para o cadastro
     path('lazerbemestar/', lazerbemestar),
-    path('cadastro/', cadastro),
+    path('cadastro/', cadastro, name="cadastro"),
     path('cadastrar', fazer_cadastro, name='fazer_cadastro'),
     path('feedback/', feedback),
+    path('coletar-feedback/', coletar_feedback, name="coletar_feedback"),
 
 ]
 

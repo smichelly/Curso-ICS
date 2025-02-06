@@ -18,19 +18,23 @@ def fazer_reserva(request, carro_id):
         nome = request.POST.get('nome')
         cpf = request.POST.get('cpf')
         forma_pagamento = request.POST.get('forma_pagamento')
-        imagem = request.FILES.get('imagem')
         inicio_reserva = request.POST.get('inicio_reserva')
         fim_reserva = request.POST.get('fim_reserva')
         carro_id = request.POST.get('carro_id')
-        carro = Carros.objects.get(id=carro_id)
-        reserva = Aluguelcarros(carro=carro, nome=nome, cpf=cpf, forma_pagamento=forma_pagamento, imagem=imagem, inicio_reserva= inicio_reserva, fim_reserva= fim_reserva)
+        reserva = Aluguelcarros(
+            carro=carro, 
+            nome=nome, 
+            cpf=cpf, 
+            forma_pagamento=forma_pagamento, 
+            inicio_reserva= inicio_reserva, 
+            fim_reserva= fim_reserva)
         reserva.save()
 
         dados = {
             'mensagem': 'Seu carro foi reservado com sucesso!'
         }
 
-        return render(request, 'form_reserva_carro_confirmacao.html', {'carro': carro}, dados)
+        return render(request, 'form_reserva_carro_confirmacao.html', dados)
     else:
         return render(request, 'form_reserva_carro.html', {'carro': carro})
 
@@ -41,10 +45,13 @@ def lazerbemestar(request):
 def cadastro(request):
     return render(request, 'cadastro.html')
 
+def coletar_feedback(request):
+    pass
 
 def fazer_cadastro(request):
     if request.method == 'POST':
         nome_completo = request.POST.get('nome_completo')
+        endereco = request.POST.get('endereco')
         telefone = request.POST.get('telefone')
         cidade = request.POST.get('cidade')
         estado = request.POST.get('estado')
@@ -52,7 +59,16 @@ def fazer_cadastro(request):
         documento = request.POST.get('documento')
         checkin = request.POST.get('checkin')
         checkout = request.POST.get('checkout')
-        cadastro = Cadastro(nome_completo, telefone= telefone, cidade= cidade, estado= estado, tipo_documento= tipo_documento, documento= documento, checkin = checkin, checkout= checkout )
+        cadastro = Cadastro(
+            nome_completo=nome_completo, 
+            telefone= telefone, 
+            cidade= cidade, 
+            estado= estado, 
+            tipo_documento=tipo_documento, 
+            documento= documento, 
+            checkin = checkin, 
+            checkout= checkout,
+            endereco=endereco )
         cadastro.save()
         dados = {
             "mensagem": "Sua reserva foi concluída com sucesso!"
