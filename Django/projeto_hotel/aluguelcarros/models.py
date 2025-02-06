@@ -1,16 +1,5 @@
 from django.db import models
 
-class Tipo_carro(models.Model):
-    nome = models.CharField(max_length=100)
-
-    def _str_(self):
-        return self.nome
-    
-class Forma_pagamento(models.Model):
-    nome = models.CharField(max_length=100)
-
-    def _str_(self):
-        return self.nome
 
 class Carros(models.Model):
     nome = models.CharField(max_length=100)
@@ -24,11 +13,9 @@ class Carros(models.Model):
 class Aluguelcarros(models.Model):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=11)
-    carro = models.ForeignKey(Carros, on_delete=models.SET_NULL, null=True)
-    forma_pagamento = models.ForeignKey(Forma_pagamento, on_delete=models.SET_NULL, null=True)
+    forma_pagamento = models.CharField(max_length=150)
     inicio_reserva = models.DateField(auto_now_add=True)
     fim_reserva = models.DateField(auto_now_add=True)
-    motorista = models.BooleanField(default=True, null=False)
 
     def __str__(self):
         return self.nome
