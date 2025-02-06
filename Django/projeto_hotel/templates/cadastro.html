@@ -77,7 +77,9 @@
   </nav>
 <div class="container">
 <h1>Cadastro</h1>
-<form action="/cadastrar" method="post">
+<form action="/cadastro" method="post">
+  {% csrf_token %}
+
 
   <label for="nome">Nome Completo</label>
   <input type="text" id="nome" name="nome" required>
