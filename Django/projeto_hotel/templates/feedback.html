@@ -10,7 +10,7 @@
 <style>
 .container {
   max-width: 1000px;
-  max-height: 100px;
+ 
   margin: auto;
   background: white;
   padding: 30px;
@@ -25,9 +25,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 padding-bottom: 10px;
 padding-left: 70px;
 padding-right: 300px;
-color: rgb(106, 16, 16);
+color: rgb(82, 15, 15);
         
 }
+
 
 h1 {
 font-size: 46px;
@@ -37,12 +38,19 @@ padding-left: 11px;
 text-shadow: 0px -1px 1px black;
 }
 
+
 a{
   color: rgb(106, 16, 16);
 
 }
 
-
+h2 {
+font-size: 40px;
+color: rgb(200, 19, 19);
+padding-bottom: 20px;
+padding-left: 11px;
+text-shadow: 0px -1px 1px black;
+}
 
 
 
@@ -70,7 +78,7 @@ a{
           <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
           </li>
-          <a href="/cadastro" class="btn btn-outline-primary">Faça sua Reserva!</a>
+          <a href="/cadastro" class="btn btn-outline-danger">Faça sua Reserva!</a>
         </ul>
         
       </div>
@@ -85,11 +93,25 @@ a{
 
 <div class="form-floating mb-3">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
-  <label for="floatingTextarea2Disabled">Comments</label>
+  <label for="floatingTextarea2Disabled">Comentários</label>
 </div> 
-      <button type="submit">Enviar</button>
+      <button type="submit" class="btn btn-outline-danger">Enviar</button>
 
     </form>
+
+    <h1>Avaliação com Estrelas</h1>
+    
+
+    <h2>Avalie nosso serviço:</h2>
+    <div class="estrelas" id="avaliacao">
+        <span class="estrela" data-value="1">★</span>
+        <span class="estrela" data-value="2">★</span>
+        <span class="estrela" data-value="3">★</span>
+        <span class="estrela" data-value="4">★</span>
+        <span class="estrela" data-value="5">★</span>
+    </div>
+    <button id="enviar" class="btn btn-outline-danger">Enviar Avaliação</button>
+    <p id="resultado"></p>
 
     <h1>Entre em Contato Conosco!</h1>
 
@@ -97,7 +119,10 @@ a{
       <p>Nome: Hotel Estrela do Mar</p>
       <p>E-mail: <a href="email">hotelestreladomar@gmail.com</a></p>
       <p>Telefone:(11)3768-9764</p>
-      <p>Endereço:Avenida da Praia,789, Bairro Indústrial, &#128205;Ilhabela-SP </p>
+      <p>Endereço:Avenida da Praia,789,
+      <p>Bairro Indústrial,</p> 
+      <p>&#128205;Ilhabela-SP</p> 
+
   
   </div>
 
