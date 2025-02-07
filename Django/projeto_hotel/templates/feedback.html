@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel Estrela do Mar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <style>
 .container {
-  max-width: 1000px;
- 
+  max-width: 950px;
   margin: auto;
   background: white;
   padding: 30px;
-  border-radius: 5px;  
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(82, 15, 15, 0.468);
   }
 
 
 
 p{
-font-size: 23px;
+font-size: 19px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 padding-bottom: 10px;
 padding-left: 70px;
@@ -31,8 +31,9 @@ color: rgb(82, 15, 15);
 
 
 h1 {
-font-size: 46px;
+font-size: 40px;
 color: rgb(200, 19, 19);
+padding-top: 20px;
 padding-bottom: 20px;
 padding-left: 11px;
 text-shadow: 0px -1px 1px black;
@@ -44,12 +45,22 @@ a{
 
 }
 
-h2 {
-font-size: 40px;
-color: rgb(200, 19, 19);
-padding-bottom: 20px;
-padding-left: 11px;
-text-shadow: 0px -1px 1px black;
+#estrela{
+  font-size: 19px;
+  padding-left: 50px;
+  color: rgb(82, 15, 15);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#comentarios{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#comentarios2{
+  padding-left: 50px;
+  padding-right: 30px;
 }
 
 
@@ -87,46 +98,48 @@ text-shadow: 0px -1px 1px black;
 
   <div class="container">
 
-    <h1>Deixe seu Feedback!</h1>
+  
+   
+
+    <h1><b>Deixe seu Feedback!</b></h1>
 
     <form action="{% url 'coletar_feedback' %}" method="post">
 
-    <div class="form-floating mb-3">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
-      <label for="floatingTextarea2Disabled">Comentários</label>
-    </div> 
-
-    <label for="avaliacao">Estralas</label>
+    <label id="estrela" for="avaliacao">Avalie com Estrelas</label>
     <select name="avaliacao" id="">
       <option value="1">1 ★</option>
       <option value="2">2 ★</option>
       <option value="3">3 ★</option>
+      <option value="4">4 ★</option>
+      <option value="5">5 ★</option>
+
     </select>
+    
+    <br>
+    <br>
+      
+    <div id="comentarios" class="form-floating mb-3">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
+      <label id="comentarios2" for="floatingTextarea2Disabled">Comentários</label>
+    </div> 
+
+    
     <button type="submit" class="btn btn-outline-danger">Enviar</button>
 
     </form>
 
-    <h1>Avaliação com Estrelas</h1>
-    
+  <br>    
 
-    <h2>Avalie nosso serviço:</h2>
-    <div class="estrelas" id="avaliacao">
-        <span class="estrela" data-value="1">★</span>
-        <span class="estrela" data-value="2">★</span>
-        <span class="estrela" data-value="3">★</span>
-        <span class="estrela" data-value="4">★</span>
-        <span class="estrela" data-value="5">★</span>
-    </div>
-    <button id="enviar" class="btn btn-outline-danger">Enviar Avaliação</button>
-    <p id="resultado"></p>
 
-    <h1>Entre em Contato Conosco!</h1>
+
+    <h1><b>Entre em Contato Conosco!</b></h1>
 
     
       <p>Nome: Hotel Estrela do Mar</p>
-      <p>E-mail: <a href="email">hotelestreladomar@gmail.com</a></p>
-      <p>Telefone:(11)3768-9764</p>
-      <p>Endereço:Avenida da Praia,789,
+      <p>E-mail:  <a href="email">hotelestreladomar@gmail.com</a></p>
+      <p>Telefone: (11)3768-9764</p>
+      <p>Endereço &#8595;
+      <p> Avenida da Praia,789, </p>
       <p>Bairro Indústrial,</p> 
       <p>&#128205;Ilhabela-SP</p> 
 

@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('home/', home),
     path('aluguelcarro/', aluguelcarro),
     path('aluguelcarro/reservar/<int:carro_id>', fazer_reserva, name='reservar'),
     # url que chama uma view para o cadastro
