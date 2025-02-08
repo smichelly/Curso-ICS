@@ -55,6 +55,7 @@ def fazer_cadastro(request):
         cidade = request.POST.get('cidade')
         estado = request.POST.get('estado')
         tipo_documento = request.POST.get('tipo_documento')
+        tipo_quarto = request.POST.get('tipo_quarto')
         documento = request.POST.get('documento')
         checkin = request.POST.get('checkin')
         checkout = request.POST.get('checkout')
@@ -63,7 +64,8 @@ def fazer_cadastro(request):
             telefone= telefone, 
             cidade= cidade, 
             estado= estado, 
-            tipo_documento=tipo_documento, 
+            tipo_documento=tipo_documento,
+            tipo_quarto=tipo_quarto, 
             documento= documento, 
             checkin = checkin, 
             checkout= checkout,
