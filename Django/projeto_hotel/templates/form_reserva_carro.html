@@ -8,6 +8,44 @@
 </head>
 
     <style>
+
+.navbar {
+        background-color: red;
+        box-shadow: 0px 1px 6px rgba(111, 0, 0, 0.486);
+        padding-left: 10px;
+      }
+
+
+    .navbar .nav-link {
+      color: rgb(200, 19, 19);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding-left: 7px;
+      text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.078);
+      transition: color 0.1s ease;
+    }
+
+
+    .navbar .nav-link:hover {
+      color: rgb(228, 1, 1);
+    }
+
+    .navbar-brand {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 25px;
+      padding: 5px 10px;
+      text-shadow: 0px -1px 1px rgb(255, 255, 255);
+      color: rgb(200, 19, 19);
+      transition: color 0.3s ease;
+      letter-spacing: 0px;
+    }
+
+    .navbar-brand:hover {
+      color:  rgb(200, 19, 19);
+      text-shadow: 0px -1px 2px rgb(255, 255, 255);
+    }
       .car-container {
           border: 1px solid #ccc;
           border-radius: 8px;
@@ -84,14 +122,14 @@
     
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home"><b>Hotel Estrela do Mar</b></a>
+      <a class="navbar-brand" href="#"><b>Hotel Estrela do Mar</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home">Início</a>
+            <a class="nav-link " aria-current="page" href="/home">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>

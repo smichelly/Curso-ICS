@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from aluguelcarros.models import Carros, Aluguelcarros
 from cadastros.models import Cadastro
+from feedbacks.models import Feedback
 
 def home(request):
     return render(request, 'home.html')
@@ -45,8 +46,6 @@ def lazerbemestar(request):
 def cadastro(request):
     return render(request, 'cadastro.html')
 
-def coletar_feedback(request):
-    pass
 
 def fazer_cadastro(request):
     if request.method == 'POST':
@@ -80,3 +79,18 @@ def fazer_cadastro(request):
 
 def feedback(request):
     return render(request, 'feedback.html')
+
+def coletar_feedback(request):
+    if request.method == 'POST':
+        comentario = request.POST.get('comentario')
+        classificar = request.POST.get('classificar')
+        feedback = Feedback(
+            comentario = comentario,
+            classificar =classificar)
+        feedback.save()
+        return render(request, "feedback_confirmacao.html")
+
+    else:
+        return render(request, "feedback.html")
+
+

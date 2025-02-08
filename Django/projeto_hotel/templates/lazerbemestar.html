@@ -9,6 +9,44 @@
 
 <style>
 
+.navbar {
+        background-color: red;
+        box-shadow: 0px 1px 6px rgba(111, 0, 0, 0.486);
+        padding-left: 10px;
+      }
+
+
+    .navbar .nav-link {
+      color: rgb(200, 19, 19);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding-left: 7px;
+      text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.078);
+      transition: color 0.1s ease;
+    }
+
+
+    .navbar .nav-link:hover {
+      color: rgb(228, 1, 1);
+    }
+
+    .navbar-brand {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 25px;
+      padding: 5px 10px;
+      text-shadow: 0px -1px 1px rgb(255, 255, 255);
+      color: rgb(200, 19, 19);
+      transition: color 0.3s ease;
+      letter-spacing: 0px;
+    }
+
+    .navbar-brand:hover {
+      color:  rgb(200, 19, 19);
+      text-shadow: 0px -1px 2px rgb(255, 255, 255);
+    }
+
         .container {
         max-width: 1300px;
         margin: auto;
@@ -72,6 +110,14 @@
       img{
         width: 500px;
          display: flex;
+         border-radius: 8px;
+         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+       }
+
+       img:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 2px 8px rgba(114, 4, 4, 0.664);
        }
 
   
@@ -81,14 +127,14 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home"><b>Hotel Estrela do Mar</b></a>
+        <a class="navbar-brand" href=""><b>Hotel Estrela do Mar</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li id="li2" class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Início</a>
+              <a class="nav-link " aria-current="page" href="/home">Início</a>
             </li>
             <li id="li2" class="nav-item">
               <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>
@@ -104,9 +150,7 @@
                 <li id="li2" ><a class="dropdown-item" href="/feedback">Tem alguma dúvida? Fale conosco!</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a id="a3" class="nav-link disabled" aria-disabled="true"> &#11088;&#65039; &#11088; &#65039;&#11088;&#65039;&#11088;&#65039; &#11088;&#65039;</a>
-            </li>
+            
             <a href="/cadastro" class="btn btn-outline-danger">Faça sua Reserva!</a>
           </ul>
           
@@ -126,21 +170,25 @@
         <img src="https://www.serhsnatalgrandhotel.com/content/imgsxml/galerias/panel_gallery/1/serhsnatalgh17.5247b546.jpg" alt="Piscina do Hotel Estrela do Mar" class="img-fluid"  >
       </div>
 
+    <br>
       
       <div class="col-md-6">
         <h3>Academia</h3>
         <p>Mantenha sua rotina de exercícios em nossa moderna academia, equipada com os melhores aparelhos.</p>
-        <img src="https://blog.casadofitness.com.br/wp-content/uploads/2022/12/BENEFICIOS-DE-TER-UMA-ACADEMIA-EM-UM-HOTEL-URBANO%E2%80%8B.jpg
-        " alt="Academia do Hotel Estrela do Mar" class="img-fluid">
+        <img src="https://sheraton-poa.com.br/wp-content/uploads/2022/03/academia-piscina-e-spa-no-hotel-sheraton-rio-de-janeiro-9.jpeg" alt="Academia do Hotel Estrela do Mar" class="img-fluid">
       </div>
     </div>
+
+  <br>
   
     <div class="row">
       <div class="col-md-6">
         <h3>Spa</h3>
-        <p>Experimente nossos tratamentos de spa, com massagens relaxantes e terapias de beleza.</p>
+        <p>Experimente nossos tratamentos de spa, com massagens relaxantes.</p>
         <img src="https://vejasp.abril.com.br/wp-content/uploads/2016/12/032_hotel-unique_-spa-room.jpg?quality=70&strip=all" alt="Spa do Hotel Estrela do Mar" class="img-fluid">
       </div>
+
+    <br>
 
       <div class="col-md-6">
         <h3>Sauna</h3>
@@ -149,6 +197,8 @@
       </div>
     </div>
   
+    <br>
+
     <div class="row">
       <div class="col-md-6">
         <h3>Quadra de Tênis</h3>
@@ -156,15 +206,20 @@
         <img src="https://s2.glbimg.com/kmNAAvXAmYAbpv2bK3C2HWxGOwo=/top/i.glbimg.com/og/ig/infoglobo1/f/original/2016/09/05/quadra_2012_04.jpg" alt="Quadra de Tênis do Hotel Estrela do Mar" class="img-fluid">
       </div>
     
+      <br>
+
       <div class="col-md-6">
         <h3>Quadra de Areia</h3>
-        <p>Na nossa quadra de areia, a diversão é garantida com sua família e amigos, momentos inesquecíveis à beira-mar!</p>
+        <p>Na nossa quadra de areia, a diversão é garantida com sua família e amigos!</p>
         <img src="https://midias.correiobraziliense.com.br/_midias/jpg/2023/07/12/675x450/1_mj1207_02-28495127.jpg?20230712231512?20230712231512" alt="Quadra de Tênis do Hotel Estrela do Mar" class="img-fluid">
       </div>
     </div>
     
 
   </section>
+
+  <br>
+  <br>
   
   <h4>Direitos do Cliente:</h2>
   <ul id="ul">

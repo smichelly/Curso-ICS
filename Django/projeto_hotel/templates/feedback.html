@@ -8,6 +8,45 @@
 </head>
 
 <style>
+
+.navbar {
+        background-color: red;
+        box-shadow: 0px 1px 6px rgba(111, 0, 0, 0.486);
+        padding-left: 10px;
+      }
+
+
+    .navbar .nav-link {
+      color: rgb(200, 19, 19);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding-left: 7px;
+      text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.078);
+      transition: color 0.1s ease;
+    }
+
+
+    .navbar .nav-link:hover {
+      color: rgb(228, 1, 1);
+    }
+
+    .navbar-brand {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 25px;
+      padding: 5px 10px;
+      text-shadow: 0px -1px 1px rgb(255, 255, 255);
+      color: rgb(200, 19, 19);
+      transition: color 0.3s ease;
+      letter-spacing: 0px;
+    }
+
+    .navbar-brand:hover {
+      color:  rgb(200, 19, 19);
+      text-shadow: 0px -1px 2px rgb(255, 255, 255);
+    } 
+
 .container {
   max-width: 950px;
   margin: auto;
@@ -45,22 +84,22 @@ a{
 
 }
 
-#estrela{
-  font-size: 19px;
-  padding-left: 50px;
-  color: rgb(82, 15, 15);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-}
-
-#comentarios{
+#classificar{
   padding-left: 30px;
   padding-right: 30px;
+  font-size: 19px;
+  color: rgb(82, 15, 15);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#comentarios2{
+#comentario{
   padding-left: 50px;
   padding-right: 30px;
+  font-size: 19px;
+  color: rgb(82, 15, 15);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 }
 
 
@@ -70,14 +109,14 @@ a{
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home"><b>Hotel Estrela do Mar</b></a>
+      <a class="navbar-brand" href=""><b>Hotel Estrela do Mar</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/home">Início</a>
+            <a class="nav-link " aria-current="page" href="/home">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/lazerbemestar">Lazer e Bem-Estar</a>
@@ -97,16 +136,17 @@ a{
   </nav>
 
   <div class="container">
-
+    <form action="{% url 'coletar_feedback' %}" method="post">
+      {% csrf_token %}
   
    
 
     <h1><b>Deixe seu Feedback!</b></h1>
 
-    <form action="{% url 'coletar_feedback' %}" method="post">
 
-    <label id="estrela" for="avaliacao">Avalie com Estrelas</label>
-    <select name="avaliacao" id="">
+    <label id="classificar" for="classificar">Avalie com Estrelas</label>
+    <select id="classificar" name="classificar" required>
+      <option value="0">0 ★</option>
       <option value="1">1 ★</option>
       <option value="2">2 ★</option>
       <option value="3">3 ★</option>
@@ -118,10 +158,11 @@ a{
     <br>
     <br>
       
-    <div id="comentarios" class="form-floating mb-3">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 95px " style="width:95px "  disabled></textarea>
-      <label id="comentarios2" for="floatingTextarea2Disabled">Comentários</label>
-    </div> 
+    <label id="comentario" for="comentario">Comentario</label>
+    <input type="text" class="form-control" id="comentario" name="comentario" required>
+
+    <br>
+    <br>
 
     
     <button type="submit" class="btn btn-outline-danger">Enviar</button>
